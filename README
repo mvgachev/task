@@ -1,0 +1,25 @@
+In order to run the program you need to install an IDE such as Intelij or Eclipse. When you run it a new localhost service will be created on this address
+http://localhost:8080/. 
+
+There are three endpoints that can be used on this address: 
+1. Get all accounts:
+This request gets all the accounts available in the DB. The url looks like this: http://localhost:8080/accounts/all with a GET request
+and a Request Body is required with the sortingType:
+{
+    "sortingType": "LASTNAME"
+}
+The four different sorting types are: "LASTNAME", "EMAILADDRESS", "FIRSTNAME", "DATEOFBIRHT".
+
+2. Delete an account by id: 
+http://localhost:8080/accounts/delete/1 with a DELETE request and the final number must be the id of the account in the database.
+
+3. Edit an account by id:
+http://localhost:8080/accounts/edit/1 with a PUT request and the final number must be the id of the account in the database. Here a Request Body is also 
+needed similar to this:
+    {
+        "id": 1,
+        "firstName": "test",
+        "lastName": "changedLastName",
+        "emailAddress": "em.address",
+        "dateOfBirth": "2000-01-28"
+    }
