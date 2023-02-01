@@ -40,9 +40,9 @@ class AccountControllerTest {
     @MockBean
     private AccountService accountService;
 
-    private final Account account1 = Account.builder().firstName("test2").build();
-    private final Account account2 = Account.builder().firstName("bath").build();
-    private final Account account3 = Account.builder().firstName("air").build();
+    private final Account account1 = Account.builder().id(1L).firstName("test2").build();
+    private final Account account2 = Account.builder().id(2L).firstName("bath").build();
+    private final Account account3 = Account.builder().id(3L).firstName("air").build();
 
     @Test
     void getAllAccounts() throws Exception {

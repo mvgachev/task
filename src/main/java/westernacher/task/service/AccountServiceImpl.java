@@ -3,6 +3,8 @@ package westernacher.task.service;
 import java.util.List;
 import java.util.Optional;
 
+import javax.transaction.Transactional;
+
 import org.springframework.stereotype.Service;
 
 import westernacher.task.dto.AccountDTO;
@@ -11,6 +13,7 @@ import westernacher.task.model.Account;
 import westernacher.task.repository.AccountRepository;
 
 @Service
+@Transactional
 public class AccountServiceImpl implements AccountService {
 
     private final AccountRepository accountRepository;
